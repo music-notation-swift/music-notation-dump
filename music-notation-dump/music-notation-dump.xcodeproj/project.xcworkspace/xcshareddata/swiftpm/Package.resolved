@@ -1,0 +1,51 @@
+{
+  "originHash" : "79819f2d60fbc922b41d81dbd77a3399a7eeade4fffee8edec4c48f301e68eff",
+  "pins" : [
+    {
+      "identity" : "music-notation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/music-notation-swift/music-notation.git",
+      "state" : {
+        "revision" : "60e42248c68830e97be02541fe5fedcced92eca0",
+        "version" : "0.3.0"
+      }
+    },
+    {
+      "identity" : "music-notation-import-musescore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/music-notation-swift/music-notation-import-musescore.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2855db176a7b06e3e8e064e39ee702fd8931ab5a"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser.git",
+      "state" : {
+        "revision" : "41982a3656a71c768319979febd796c6fd111d5c",
+        "version" : "1.5.0"
+      }
+    },
+    {
+      "identity" : "swxmlhash",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/drmohundro/SWXMLHash.git",
+      "state" : {
+        "revision" : "6ae7b83692c4a2ed53ea2cb0e6cda20768800a99",
+        "version" : "8.1.0"
+      }
+    },
+    {
+      "identity" : "zipfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/weichsel/ZIPFoundation.git",
+      "state" : {
+        "revision" : "02b6abe5f6eef7e3cbd5f247c5cc24e246efcfe0",
+        "version" : "0.9.19"
+      }
+    }
+  ],
+  "version" : 3
+}
