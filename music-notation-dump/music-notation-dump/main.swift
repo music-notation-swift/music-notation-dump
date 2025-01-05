@@ -21,8 +21,8 @@ Currently supported music notation file types include:
 // swiftlint:disable type_name
 struct mncdump: AsyncParsableCommand {
 	@Argument(help: argumentHelp, transform: { URL(fileURLWithPath: NSString(string: $0).expandingTildeInPath) }) var files: [URL]
-	@Flag(name: [.customLong("verbose"), .customShort("v")], help: "Shows verbose output.") var verbose = false
-	@Flag(name: [.customLong("GraphViz"), .customShort("g")], help: "Dump to dot files (GraphViz format).") var graphviz = false
+	@Flag(name: [.customLong("graphviz"), .customShort("g")], help: "Dump to dot file (GraphViz format).") var graphviz = false
+	@Flag(name: [.customLong("text"), .customShort("t")], help: "Dump to text file (Text format).") var text = false
 
 	mutating func validate() throws {
 		for file in files {
@@ -45,9 +45,9 @@ struct mncdump: AsyncParsableCommand {
 			let fileExtension = file.pathExtension
 			switch fileExtension {
 			case "mscz", "mscx":
-				let importer = MuseScoreImporter(file: file, verbose: verbose, lazy: false)
+				let importer = MuseScoreImporter(file: file, verbose: false, lazy: false)
 				let score = try importer.consume()
-				dump(score: score)
+				dump(score: score, graphviz: graphviz, text: text)
 			default:
 				throw ValidationError("`\(file.lastPathComponent)` Unsupported file type \(fileExtension)")
 			}
